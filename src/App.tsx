@@ -1,5 +1,4 @@
-import Header from './components/Header';
-import ShineHover from './effects/ShineHover';
+import Header from './components/Header/Header';
 
 function App() {
   return (

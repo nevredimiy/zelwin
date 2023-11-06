@@ -10,6 +10,8 @@ export default {
         'regal-blue': '#3861FB',
         'regal-green': '#1BCB96',
         'active-gray': '#F2F5FB',
+        'regal-black': '#242424',
+        'light-blue': '#F2F5FB',
       },
       animation: {
         shine: "shine 1s",
