@@ -1,10 +1,12 @@
+import { menuItemsData } from './menuItemsData';
+import MenuItems from './MenuItems';
+
 const Menu = () => {
     return (
-        <ul className='hidden md:flex items-center gap-6 text-white font-semibold hover:text-active-gray'>
-            <li><a href="">Services</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Cases</a></li>
-            <li><a href="">Contacts</a></li>
+        <ul className="flex flex-col text-regal-black text-2xl md:text-base md:flex-row md:items-center gap-6 md:text-white font-semibold">
+            {menuItemsData.map((menu, index) => {
+                return <MenuItems key={index} items={menu}  />
+            })}
         </ul>
     )
 }

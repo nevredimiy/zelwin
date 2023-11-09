@@ -5,13 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+        center: true,
+      },
     extend: {
       colors: {
         'regal-blue': '#3861FB',
+        'light-blue': '#F2F5FB',
         'regal-green': '#1BCB96',
+        'regal-gray': '#919191',
         'active-gray': '#F2F5FB',
         'regal-black': '#242424',
-        'light-blue': '#F2F5FB',
       },
       animation: {
         shine: "shine 1s",

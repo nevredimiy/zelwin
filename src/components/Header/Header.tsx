@@ -7,6 +7,7 @@ import CartIcon from '../../assets/images/icons/cart-icon.svg?react';
 import logo from '../../assets/images/logo.svg';
 import burgerIcon from '../../assets/images/icons/burger-icon.svg';
 import closeIcon from '../../assets/images/icons/close-icon.svg';
+import Menu from './Menu';
 
 const Header = () => {
     const [isOpenMobileMenu, setIsOpenMobileMinu] = useState(false);
@@ -30,20 +31,15 @@ const Header = () => {
 
     return (
         <header className='bg-regal-blue fixed z-50 top-0 left-0 w-full h-16'>
-            <div className="flex justify-between items-center py-3 px-3 h-full relative z-20 before:absolute before:top-0 before:w-full before:left-0 before:h-full
+            <div className="flex justify-between items-center p-3 h-full relative z-20 before:absolute before:top-0 before:w-full before:left-0 before:h-full
             before:z-20 before:bg-regal-blue">
                 <a  href="#" title='Logo'><img className='hover:opacity-75 transition relative z-20' src={logo} alt="Logo" /></a>
                 <button className='md:hidden relative z-20 w-6 flex justify-center items-center' onClick={handleOnOpen} type='button'>
                     <img className={`absolute hover:opacity-75 transition ${burgerClass}`} src={burgerIcon} alt="Menu" />
                     <img className={`absolute hover:opacity-75 transition ${closeClass}`} src={closeIcon} alt="Close Menu" />
                 </button>
-                <nav className={`${menuClass} transition-all duration-700 fixed left-0 w-full px-4 py-6 bg-white md:flex md:justify-center md:translate-y-0 md:bg-transparent md:relative md:p-0 md:z-20`}>
-                    <ul className="flex flex-col text-regal-black text-2xl md:text-base md:flex-row md:items-center gap-6 md:text-white font-semibold">
-                        <li ><a className='p-2 hover:opacity-75 md:hover:text-active-gray' href="">Services</a></li>
-                        <li ><a className='p-2 hover:opacity-75 md:hover:text-active-gray' href="">About us</a></li>
-                        <li ><a className='p-2 hover:opacity-75 md:hover:text-active-gray' href="">Cases</a></li>
-                        <li ><a className='p-2 hover:opacity-75 md:hover:text-active-gray' href="">Contacts</a></li>
-                    </ul>
+                <nav className={`${menuClass} transition-all duration-700 fixed left-0 w-full px-4 py-6 bg-white md:flex md:justify-center md:translate-y-0 md:bg-transparent  md:p-0 md:z-20`}>
+                   <Menu />
                 </nav>
                 <div className="flex items-center gap-4">
                     <button title='Search' type='button'><SearchIcon className='fill-white hover:opacity-75 relative z-20' /></button>
