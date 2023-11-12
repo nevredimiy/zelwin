@@ -9,6 +9,9 @@ export default {
         center: true,
       },
     extend: {
+      screens: {
+      'ssm': '520px',
+    },
       colors: {
         'regal-blue': '#3861FB',
         'light-blue': '#F2F5FB',

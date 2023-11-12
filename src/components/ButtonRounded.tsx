@@ -1,13 +1,13 @@
 type Props = {
     children: React.ReactNode;
-    bgButton: string;
+    rootClass: string;
 }
 
-const ButtonRounded = ({ children, bgButton }: Props) => {
+const ButtonRounded = ({ children, rootClass }: Props) => {
   return (
-    <div className={`px-5 py-2 rounded-full ${bgButton} fill-regal-blue`}>
+    <button type="button" className={`rounded-full ${rootClass}`}>
         {children}
-    </div>
+    </button>
   )
 }
 

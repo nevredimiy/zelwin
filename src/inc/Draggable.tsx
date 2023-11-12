@@ -15,7 +15,7 @@ export const Draggable = ({ rootClass = "", children }: DraggableProps) => {
         scrollTop: 0
     });
 
-    const handleDragStart = (e: { pageX: number; pageY: number; }) => {
+    const handleDragStart:React.MouseEventHandler<HTMLDivElement> = (e) => {
         if (!ourRef.current) return
         const slider = ourRef.current.children[0];
         let startX: number = 0;
@@ -32,7 +32,7 @@ export const Draggable = ({ rootClass = "", children }: DraggableProps) => {
         if (!ourRef.current) return
         document.body.style.cursor = "default"
     }
-    const handleDrag = (e: { preventDefault: () => void; pageX: number; pageY: number; }) => {
+    const handleDrag:React.MouseEventHandler<HTMLDivElement> = (e) => {
         if (!isMouseDown || ! ourRef.current) return;
         e.preventDefault();
         const slider = ourRef.current.children[0];
