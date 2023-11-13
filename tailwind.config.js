@@ -5,10 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container: {
+
+    extend: {
+       container: {
         center: true,
       },
-    extend: {
       screens: {
       'ssm': '520px',
     },

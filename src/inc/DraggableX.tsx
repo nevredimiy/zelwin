@@ -20,6 +20,8 @@ export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
             const scrollLeft: number = slider.scrollLeft;
             mouseCoords.current = { startX, scrollLeft };
             slider.classList.add('md:scale-105');
+            console.log(slider);
+            
         }
     }
     const handleMouseUp = () => {
@@ -46,6 +48,7 @@ export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
             const walk: number = x - mouseCoords.current.startX;
             slider.scrollLeft = mouseCoords.current.scrollLeft - walk;
         }
+
     }
 
     return (

@@ -1,19 +1,21 @@
 
-declare module './menuItemsData.ts' {
+declare module 'menuItemsData.ts' {
   const subSubmenu: {
+    id: number;
     title: string;
     description?: string;
     url: string;
   }[];
-const submenu: {
+  const submenu: {
+    id: string;
     title: string;
     url: string;
-    subSubmenu: subSubmenu;
+    subSubmenu: typeof subSubmenu;
   }[];
   const menuItemsData: {
     title: string;
     url: string;
-    submenu?: submenu;
+    submenu?: typeof submenu;
   }[];
   export default menuItemsData;
 }

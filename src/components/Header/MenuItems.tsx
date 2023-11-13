@@ -10,9 +10,11 @@ interface MenuItemsProps {
         title: string;
         url: string;
         submenu?: {
+            id: string;
             title: string;
             url: string;
             subSubmenu: {
+                id: number;
                 title: string;
                 description?: string;
                 url: string;
@@ -34,13 +36,13 @@ const MenuItems = ({ items }: MenuItemsProps) => {
                     >
                         {items.title}
                         {
-                            sizeScreen > 768 ?
+                            sizeScreen > 767 ?
                                 <img className={`${isShowDropdown && 'rotate-180'} transition-transform`} src={chewronIconDown} alt="Dropdown Menu" /> :
                                 <img className={`${isShowDropdown && 'rotate-180'} transition-transform`} src={chewronIconRight} alt="Dropdown Menu" />
                         }
                     </button>
                     {
-                        isShowDropdown && sizeScreen > 768 &&
+                        isShowDropdown && sizeScreen > 767 &&
                         <div className="relative">
                             <div className="w-4 h-4 bg-white rotate-45 absolute top-4 left-1/2 -translate-x-1/2"></div>
                         </div>

@@ -4,6 +4,7 @@ import {DraggableX} from '../../inc/DraggableX'
 
 interface DropdownProps {
   submenu: {
+    id: string;
     title: string;
     url: string;
     subSubmenu: {
@@ -44,7 +45,7 @@ const Dropdown = ({ submenu, isShow, sizeScreen, setIsShowDropdown }: DropdownPr
           <>
             <li
               onClick={() => setIsActiveSubmenu(index)}
-              key={index}
+              key={submenuItems.id}
               className={`menu-items cursor-pointer p-2
           ${isAciveSubmenu === index ? 'text-regal-blue' : 'text-regal-gray'}
            flex-shrink-0
@@ -65,7 +66,7 @@ const Dropdown = ({ submenu, isShow, sizeScreen, setIsShowDropdown }: DropdownPr
         {submenu[isAciveSubmenu].subSubmenu.map((submenuTab) => {
           return (
             <a key={submenuTab.id} className='w-full text-regal-black hover:bg-active-gray p-3 rounded-2xl' href={submenuTab.url}>
-              <h2 className='pb-2'>{submenuTab.title}</h2>
+              <h3 className='pb-2'>{submenuTab.title}</h3>
               {submenuTab.description && <div className='text-sm font-normal'>{submenuTab.description}</div>}
               </a>
 
