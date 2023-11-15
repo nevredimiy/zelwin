@@ -1,3 +1,8 @@
+// import sociailMedia from '../assets/images/services/social_media-icon.svg';
+// import idoUno from '../assets/images/services/ido_uno-icon.svg';
+// import development from '../assets/images/services/development-icon.svg';
+// import {SocialMedia, IdoUno, Development} from '../components/Services/serviceIcons/Icons'
+
 const subSubmenu = [
     {
         id: 10,
@@ -194,48 +199,64 @@ const submenu = [
         title: 'Social media',
         url: 'social-media',
         subSubmenu: subSubmenu,
+        servicesCount: 24,
+        serviceIcon: 'SocialMedia',
     },
     {
         id: '2s',
         title: 'Development',
         url: 'dev',
         subSubmenu: subSubmenu1,
+        servicesCount: 134,
+        serviceIcon: 'Development',
     },
     {
         id: '3s',
         title: 'IDO / INO',
         url: 'ido-ino',
         subSubmenu: subSubmenu2,
+        servicesCount: 77,
+        serviceIcon: 'IdoUno',
     },
     {
         id: '4s',
         title: 'Social media',
         url: 'social-media',
         subSubmenu: subSubmenu3,
+        servicesCount: 134,
+        serviceIcon: 'SocialMedia',
     },
     {
         id: '5s',
         title: 'Development',
         url: 'dev',
         subSubmenu: subSubmenu,
+        servicesCount: 77,
+        serviceIcon: 'Development',
     },
     {
         id: '6s',
         title: 'IDO / INO',
         url: 'ido-ino',
         subSubmenu: subSubmenu,
+        servicesCount: 134,
+        serviceIcon: 'IdoUno'
     },
     {
         id: '7s',
         title: 'Social media',
         url: 'social-media',
         subSubmenu: subSubmenu,
+        servicesCount: 24,
+        serviceIcon: 'SocialMedia',
     },
     {
         id: '8s',
         title: 'Development',
         url: 'dev',
         subSubmenu: subSubmenu,
+        servicesCount: 134,
+        serviceIcon: 'Development',
     },
 ];
 

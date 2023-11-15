@@ -1,11 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 type DraggableProps = {
     children: React.ReactNode;
     rootClass?: string;
+    sliding?: number;
 }
 
-export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
+export const DraggableX = ({ rootClass = "", children, sliding }: DraggableProps) => {
     const sliderRef = useRef<HTMLDivElement>(null);
     const [isMouseDown, setIsMouseDown] = useState(false);
     const mouseCoords = useRef({
@@ -19,25 +20,15 @@ export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
             const startX: number = e.pageX - sliderRef.current.offsetLeft;
             const scrollLeft: number = slider.scrollLeft;
             mouseCoords.current = { startX, scrollLeft };
-            slider.classList.add('md:scale-105');
-            console.log(slider);
-            
         }
     }
     const handleMouseUp = () => {
         setIsMouseDown(false);
-        rootClass = 'scale-100';
-        if (sliderRef.current) {
-            const slider = sliderRef.current.children[0];
-            slider.classList.remove('md:scale-105');
-        }
+
     }
     const handleMouseLeave = () => {
         setIsMouseDown(false);
-        if (sliderRef.current) {
-            const slider = sliderRef.current.children[0];
-            slider.classList.remove('md:scale-105');
-        }
+
     }
     const handleMouseMove:React.MouseEventHandler<HTMLDivElement> = (e) => {
         if (!isMouseDown) return;
@@ -47,9 +38,24 @@ export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
             const x: number = e.pageX - sliderRef.current.offsetLeft;
             const walk: number = x - mouseCoords.current.startX;
             slider.scrollLeft = mouseCoords.current.scrollLeft - walk;
-        }
 
+        }
     }
+    useEffect(() => {
+        if (mouseCoords.current.scrollLeft > 0) console.log("more than");
+
+        if (sliderRef.current && sliding) {
+            const slider = sliderRef.current.children[0];
+            slider.scrollLeft = sliding;
+        }
+    }, [sliding]);
+
+    useEffect(() => {
+        if (sliderRef.current) {
+            const slider = sliderRef.current.children[0] as HTMLElement;
+            slider.style.overflowX = 'hidden';
+        }
+    }, [])
 
     return (
         <div ref={sliderRef}

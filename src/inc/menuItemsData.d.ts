@@ -11,6 +11,8 @@ declare module 'menuItemsData.ts' {
     title: string;
     url: string;
     subSubmenu: typeof subSubmenu;
+    servicesCount: number;
+    serviceIcon: string;
   }[];
   const menuItemsData: {
     title: string;

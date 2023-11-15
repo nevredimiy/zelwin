@@ -6,12 +6,14 @@ import company3 from '../../assets/images/icons/logo-company3-icon.svg';
 import user1 from '../../assets/images/avatars/user1-avatar.png';
 import user2 from '../../assets/images/avatars/user2-avatar.png';
 import user3 from '../../assets/images/avatars/user3-avatar.png';
-import BestOffer from '../BestOffer/BestOffer'
+import BestOffer from '../BestOffer/BestOffer';
+import Partners from '../Partners';
+import Services from '../Services';
 
 const Main = () => {
     return (
         <main className='my-16'>
-            <section className='mb-16'>
+            <section className='mb-16 overflow-hidden'>
                 <div className="py-10 lg:py-28">
                 <div className="px-20 text-center mb-6 md:mb-10 lg:px-16">
                     <h1 className='font-semibold text-3xl mb-7 ssm:text-4xl md:text-5xl lg:text-6xl lg:mb-10'>Services<br className='lg:hidden' /> for the <span className='text-regal-blue'>promotion</span> of <span className='text-regal-blue'>crypto</span> projects</h1>
@@ -119,6 +121,8 @@ const Main = () => {
             </div>
             </section>
             <BestOffer />
+            <Partners />
+            <Services />
         </main>
     )
 }

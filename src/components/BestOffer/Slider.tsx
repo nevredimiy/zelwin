@@ -7,7 +7,7 @@ type SliderProps = {
 
 const Slider = ({service}:SliderProps) => {
   return (
-     <div className="bg-white rounded-3xl min-w-fit max-w-[300px] ssm:max-w-[380px] lg:max-w-[460px]">
+     <div className="bg-white rounded-3xl min-w-[300px] ssm:min-w-[380px] lg:w-[460px]">
           <div className="flex justify-between items-center py-2 px-6">
             <h3>Plan - 3 months</h3>
             <div className="text-regal-blue flex flex-col items-end">
