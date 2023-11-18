@@ -1,11 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, SetStateAction, Dispatch } from 'react'
 
 type DraggableProps = {
     children: React.ReactNode;
     rootClass?: string;
+    sliding: number;
+    setSliding: Dispatch<SetStateAction<number>>;
+    setSlideCount: Dispatch<SetStateAction<number>>;
+    slideWidth?: number;
 }
 
-export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
+export const DraggableExtend = ({ rootClass = "", children, sliding, setSlideCount, slideWidth, setSliding }: DraggableProps) => {
     const sliderRef = useRef<HTMLDivElement>(null);
     const [isMouseDown, setIsMouseDown] = useState(false);
     const mouseCoords = useRef({
@@ -32,6 +36,14 @@ export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
     }
     const handleMouseUp = () => {
         setIsMouseDown(false);
+        if (sliderRef.current) {
+            const slider = sliderRef.current.children[0];
+            let step = 2;
+            if (slideWidth) step = Math.round(slider.scrollLeft / slideWidth);
+            setSlideCount(step);
+            if (slideWidth) setSliding(slideWidth * step);
+            console.log("Mouse Up - scrollLeft: " + slider.scrollLeft);
+        }
     }
     const handleMouseLeave = () => {
         setIsMouseDown(false);
@@ -56,6 +68,15 @@ export const DraggableX = ({ rootClass = "", children }: DraggableProps) => {
         }
 
     }
+    useEffect(() => {
+        if (sliderRef.current) {
+            const slider = sliderRef.current.children[0];
+            if (sliding !== undefined) slider.scrollLeft = sliding;
+            console.log('scrollLeft: ' + slider.scrollLeft);
+            console.log('sliding: ' + sliding);
+
+        }
+    }, [sliding]);
 
     useEffect(() => {
         if (sliderRef.current) {

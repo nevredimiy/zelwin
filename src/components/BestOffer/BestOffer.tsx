@@ -1,6 +1,6 @@
 import Slider from './Slider';
 import arrowRightSlider from '../../assets/images/icons/arrow-right-for-slider.svg';
-import { DraggableX } from '../../inc/DraggableX'
+import {DraggableExtend} from '../../inc/DraggableExtend'
 import { useEffect, useRef, useState } from 'react';
 
 const arr = [1, 2, 3, 4, 5];
@@ -41,7 +41,7 @@ const BestOffer = () => {
       if (sliderRef.current) return (sliderRef.current?.children[0].clientWidth + 20);
       return 0;
     })
-  }, [])
+  }, [offsetTransition])
 
   return (
     <section className="bg-regal-blue pt-16 pb-20">
@@ -51,16 +51,15 @@ const BestOffer = () => {
           <div className="hidden ssm:flex gap-4">
             <button onClick={handleLeftClick} type='button'><img className='rotate-180' src={arrowRightSlider} alt="Left" /></button>
             <button onClick={handleRightClick} type='button'><img src={arrowRightSlider} alt="Right" /></button>
-
           </div>
         </div>
-        <DraggableX sliding={offsetTransition} setSliding={setOffsetTransition}>
+        <DraggableExtend sliding={offsetTransition} setSlideCount={setSlideCount} slideWidth={slideWidth} setSliding={setOffsetTransition}>
           <div ref={sliderRef} className="relative z-30 flex gap-5">
             {arr.map((item, index) => {
               return <Slider key={index} service={item} />
             })}
           </div>
-        </DraggableX>
+        </DraggableExtend>
         <div className="flex justify-center gap-2">
           {
             arr.map(((item, index) => {

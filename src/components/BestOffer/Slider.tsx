@@ -9,7 +9,7 @@ const Slider = ({service}:SliderProps) => {
   return (
      <div className="bg-white rounded-3xl min-w-[300px] ssm:min-w-[380px] lg:w-[460px]">
           <div className="flex justify-between items-center py-2 px-6">
-            <h3>Plan - 3 months</h3>
+            <h3>Plan - {service} months</h3>
             <div className="text-regal-blue flex flex-col items-end">
               <div className="text-medium text-[28px] ssm:text-[32px] md:text-[38px]">{service}</div>
               <div className="text-sm ssm:text-base">services</div>
