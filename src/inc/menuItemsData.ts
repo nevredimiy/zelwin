@@ -1,8 +1,3 @@
-// import sociailMedia from '../assets/images/services/social_media-icon.svg';
-// import idoUno from '../assets/images/services/ido_uno-icon.svg';
-// import development from '../assets/images/services/development-icon.svg';
-// import {SocialMedia, IdoUno, Development} from '../components/Services/serviceIcons/Icons'
-
 const subSubmenu = [
     {
         id: 10,
@@ -200,7 +195,7 @@ const submenu = [
         url: 'social-media',
         subSubmenu: subSubmenu,
         servicesCount: 24,
-        serviceIcon: 'SocialMedia',
+        serviceIcon: 'socialMedia',
     },
     {
         id: '2s',
@@ -208,7 +203,7 @@ const submenu = [
         url: 'dev',
         subSubmenu: subSubmenu1,
         servicesCount: 134,
-        serviceIcon: 'Development',
+        serviceIcon: 'development',
     },
     {
         id: '3s',
@@ -216,7 +211,7 @@ const submenu = [
         url: 'ido-ino',
         subSubmenu: subSubmenu2,
         servicesCount: 77,
-        serviceIcon: 'IdoUno',
+        serviceIcon: 'idoUno',
     },
     {
         id: '4s',
@@ -224,7 +219,7 @@ const submenu = [
         url: 'social-media',
         subSubmenu: subSubmenu3,
         servicesCount: 134,
-        serviceIcon: 'SocialMedia',
+        serviceIcon: 'socialMedia',
     },
     {
         id: '5s',
@@ -232,7 +227,7 @@ const submenu = [
         url: 'dev',
         subSubmenu: subSubmenu,
         servicesCount: 77,
-        serviceIcon: 'Development',
+        serviceIcon: 'development',
     },
     {
         id: '6s',
@@ -240,7 +235,7 @@ const submenu = [
         url: 'ido-ino',
         subSubmenu: subSubmenu,
         servicesCount: 134,
-        serviceIcon: 'IdoUno'
+        serviceIcon: 'idoUno'
     },
     {
         id: '7s',
@@ -248,7 +243,7 @@ const submenu = [
         url: 'social-media',
         subSubmenu: subSubmenu,
         servicesCount: 24,
-        serviceIcon: 'SocialMedia',
+        serviceIcon: 'socialMedia',
     },
     {
         id: '8s',
@@ -256,7 +251,7 @@ const submenu = [
         url: 'dev',
         subSubmenu: subSubmenu,
         servicesCount: 134,
-        serviceIcon: 'Development',
+        serviceIcon: 'development',
     },
 ];
 

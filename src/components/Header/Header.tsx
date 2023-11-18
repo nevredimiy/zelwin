@@ -30,7 +30,8 @@ const Header = () => {
 
     return (
         <header className='bg-regal-blue fixed z-50 top-0 left-0 w-full h-16'>
-            <div className="flex justify-between items-center p-3 h-full relative z-20 before:absolute before:top-0 before:w-full before:left-0 before:h-full
+            <div className="container">
+               <div className="flex justify-between items-center p-3 h-full relative z-20 before:absolute before:top-0 before:w-full before:left-0 before:h-full
             before:z-20 before:bg-regal-blue">
                 <a href="#" title='Logo'><img className='hover:opacity-75 transition relative z-20' src={logo} alt="Logo" /></a>
 
@@ -64,6 +65,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            </div>
+
         </header>
     )
 }

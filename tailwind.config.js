@@ -19,7 +19,10 @@ export default {
         'regal-green': '#1BCB96',
         'regal-gray': '#919191',
         'active-gray': '#F2F5FB',
+        'light-gray': '#828A97',
         'regal-black': '#242424',
+        'regal-orange': '#FF862F',
+        'regal-sky': '#3AD0FF',
       },
       animation: {
         shine: "shine 1s",
