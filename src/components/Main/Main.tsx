@@ -5,6 +5,9 @@ import Services from '../Services';
 import MediaNews from '../MediaNews';
 import Reason from '../Reason';
 import Ambassador from '../Ambassador';
+import Meet from '../Meet';
+import Achivements from '../Achivements';
+import Reviews from '../Reviews';
 
 const Main = () => {
     return (
@@ -16,6 +19,9 @@ const Main = () => {
             <MediaNews />
             <Reason />
             <Ambassador />
+            <Meet />
+            <Achivements />
+            <Reviews />
         </main>
     )
 }

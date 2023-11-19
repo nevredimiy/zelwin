@@ -15,7 +15,7 @@
     @apply bg-light-blue
   }
   h2 {
-    @apply font-bold text-[28px] ssm:text-2xl md:text-4xl lg:text-[52px];
+    @apply font-bold text-[28px] ssm:text-3xl md:text-4xl lg:text-[52px];
   }
   h3 {
     @apply font-bold text-xl ssm:text-2xl md:text-[28px] lg:text-[32px];

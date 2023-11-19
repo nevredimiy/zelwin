@@ -3,7 +3,7 @@ import imgArticle1 from '../../assets/images/media-new/image1.jpg';
 import imgArticle2 from '../../assets/images/media-new/image2.jpg';
 import imgArticle3 from '../../assets/images/media-new/image3.jpg';
 import singEntrepreneur from '../../assets/images/media-new/singEntrepreneur.svg';
-import ButtonRounded from '../ButtonRounded'
+import ButtonRoundedTransporant from '../ButtonRoundedTransporant'
 
 const index = () => {
     return (
@@ -30,10 +30,7 @@ const index = () => {
                         <div className="mb-5"><img src={singEntrepreneur} alt="Entrepreneur" /></div>
                     </div>
                 </div>
-
-                <ButtonRounded rootClass='border border-regal-blue px-10 py-1 block mx-auto transition group hover:bg-regal-blue'>
-                    <div className="font-medium text-regal-blue transition group-hover:text-white">See all</div>
-                </ButtonRounded>
+                <ButtonRoundedTransporant />
             </div>
         </section>
     )
