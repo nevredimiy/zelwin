@@ -8,6 +8,7 @@ import Ambassador from '../Ambassador';
 import Meet from '../Meet';
 import Achivements from '../Achivements';
 import Reviews from '../Reviews';
+import Faq from '../Faq';
 
 const Main = () => {
     return (
@@ -22,6 +23,7 @@ const Main = () => {
             <Meet />
             <Achivements />
             <Reviews />
+            <Faq />
         </main>
     )
 }

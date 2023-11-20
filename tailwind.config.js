@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
       backgroundImage: {
         'ambassador-pattern': "url('./src/assets/images/woman/business-woman-phone-xl.jpg')"
       },
