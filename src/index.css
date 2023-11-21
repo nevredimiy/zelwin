@@ -21,10 +21,13 @@
     @apply font-bold text-xl ssm:text-2xl md:text-[28px] lg:text-[32px];
   }
 }
-
 .currentCol {
   fill: red;
   stroke: red;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
 }
 
 
