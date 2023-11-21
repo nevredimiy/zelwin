@@ -25,7 +25,7 @@ const Index = () => {
                         <div className="font-semibold text-xl lg:text-3xl xl:text-2xl text-white mb-3">Get a free consultation</div>
                         <div className="text-sm text-white mb-4 ssm:text-base">Please complete the form below</div>
                         <form className='' action="">
-                            <select className='w-full mb-2 rounded-md py-3 px-2' title='themes' name="themes" id="themes">
+                            <select className='w-full mb-2 rounded-md py-3 px-2 appearance-none' title='themes' name="themes" id="themes">
                                 <option value="theme 1">Theme 1</option>
                                 <option value="theme 2">Theme 2</option>
                                 <option value="theme 3">Theme 3</option>

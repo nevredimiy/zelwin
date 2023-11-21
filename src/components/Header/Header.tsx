@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import ButtonRounded from '../ButtonRounded';
 
 import SearchIcon from '../../assets/images/icons/search-icon.svg?react';
 import CartIcon from '../../assets/images/icons/cart-icon.svg?react';
@@ -59,9 +58,9 @@ const Header = () => {
                     </form>
 
                     <div className='group relative z-20'>
-                        <ButtonRounded rootClass='px-5 py-2 bg-white hover:bg-active-gray'>
-                            <CartIcon className="fill-regal-blue transition group-hover:translate-x-1" />
-                        </ButtonRounded>
+                        <button title='Cart' type="button" className='border border-transparent rounded-full px-5 py-2 bg-white hover:border-white transition hover:bg-regal-blue'>
+                            <CartIcon className="fill-regal-blue transition group-hover:fill-white" />
+                        </button>
                     </div>
                 </div>
             </div>

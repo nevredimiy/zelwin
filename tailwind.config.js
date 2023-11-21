@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'customShadow': '0px 0px 6px 0px rgba(0,28,135,0.20)',
+      },
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',

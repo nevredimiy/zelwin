@@ -17,37 +17,37 @@ const index = () => {
             <div className="">
               <div className="text-white font-medium mb-3">contact@zelwin.agency</div>
               <div className="flex items-center gap-3">
-                <InIcon className='w-8 hover:grayscale' />
-                <InstagramIcon className='w-8 hover:grayscale' />
-                <TelegramIcon className='w-8 hover:grayscale' />
-                <FacebookIcon className='w-8 hover:grayscale' />
+                <a href=''><InIcon className='w-8 hover:grayscale' /></a>
+                <a href=''><InstagramIcon className='w-8 hover:grayscale' /></a>
+                <a href=''><TelegramIcon className='w-8 hover:grayscale' /></a>
+                <a href=''><FacebookIcon className='w-8 hover:grayscale' /></a>
               </div>
             </div>
           </div>
           <div className="mb-4">
             <div className="text-white font-semibold mb-4">Services</div>
             <ul className='text-light-gray text-xs grid gap-y-3 ssm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-              <li>Publication</li>
-              <li>Smart Telegram Bot</li>
-              <li>Anti Sniper Bot</li>
-              <li>Проведение АМА</li>
-              <li>Профессиональный</li>
-              <li>CryptoRank тренды</li>
-              <li>Получение Legal Opinion</li>
-              <li>Проведение АМА</li>
-              <li>CryptoRank тренды</li>
-              <li>Anti Sniper Bot</li>
-              <li>Publication</li>
-              <li>Publication</li>
-              <li>Smart Telegram Bot</li>
-              <li>Anti Sniper Bot</li>
-              <li>Проведение АМА</li>
-              <li>Профессиональный Market Making</li>
-              <li>CryptoRank тренды</li>
-              <li>Smart Telegram Bot</li>
-              <li>Профессиональный Market Making</li>
-              <li>Получение Legal Opinion</li>
-              <li>Получение Legal Opinion</li>
+              <li className="hover:text-white transition"><a href=""> Publication</a></li>
+              <li className="hover:text-white transition"><a href=""> Smart Telegram Bot</a></li>
+              <li className="hover:text-white transition"><a href=""> Anti Sniper Bot</a></li>
+              <li className="hover:text-white transition"><a href=""> Проведение АМА</a></li>
+              <li className="hover:text-white transition"><a href=""> Профессиональный</a></li>
+              <li className="hover:text-white transition"><a href=""> CryptoRank тренды</a></li>
+              <li className="hover:text-white transition"><a href=""> Получение Legal Opinion</a></li>
+              <li className="hover:text-white transition"><a href=""> Проведение АМА</a></li>
+              <li className="hover:text-white transition"><a href=""> CryptoRank тренды</a></li>
+              <li className="hover:text-white transition"><a href=""> Anti Sniper Bot</a></li>
+              <li className="hover:text-white transition"><a href=""> Publication</a></li>
+              <li className="hover:text-white transition"><a href=""> Publication</a></li>
+              <li className="hover:text-white transition"><a href=""> Smart Telegram Bot</a></li>
+              <li className="hover:text-white transition"><a href=""> Anti Sniper Bot</a></li>
+              <li className="hover:text-white transition"><a href=""> Проведение АМА</a></li>
+              <li className="hover:text-white transition"><a href=""> Профессиональный Market Making</a></li>
+              <li className="hover:text-white transition"><a href=""> CryptoRank тренды</a></li>
+              <li className="hover:text-white transition"><a href=""> Smart Telegram Bot</a></li>
+              <li className="hover:text-white transition"><a href=""> Профессиональный Market Making</a></li>
+              <li className="hover:text-white transition"><a href=""> Получение Legal Opinion</a></li>
+              <li className="hover:text-white transition"><a href=""> Получение Legal Opinion</a></li>
             </ul>
           </div>
         </div>
