@@ -1,16 +1,36 @@
-export interface Submenu {
-   title: string;
-    url: string;
+export interface dataReviews {
+        body: string;
+        avatar: string;
+        title: string;
+        description: string;
 }
 
-export interface MenuI {
+export interface dataBestOffer {
     title: string;
-    url: string;
-    submenu?: Submenu;
+    countServices: number;
+    body: string[];
+    price: number;
+    newPrice: number;
+}
+
+export interface DraggableSliderProps {
+    sectionClass?: string;
+    title: string;
+    titleClass?: string;
+    arrowClass?: string;
+    data: dataReviews[] | dataBestOffer[];
+    dottesClass?: string;
+    dottesActiveClass?: string;
+    children: React.ReactNode;
 }
 
 
-export interface MenuItemsProps {
-    items: MenuI;
-    depthLevel: number;
+export type SliderProps = {
+  data: {
+    title: string,
+    countServices: number,
+    body: string[],
+    price: number,
+    newPrice: number,
+  };
 }

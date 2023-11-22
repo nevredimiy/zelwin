@@ -2,19 +2,9 @@ import React, { useState, useRef, useEffect } from 'react'
 
 import ArrowRightSlider from '../assets/images/icons/arrow-right-for-slider.svg?react';
 import { DraggableExtend } from './DraggableExtend';
+import { DraggableSliderProps } from '../typings/data';
 
-interface DraggableSliderProps {
-    sectionClass?: string;
-    title: string;
-    titleClass?: string;
-    arrowClass?: string;
-    arr: number[];
-    dottesClass?: string;
-    dottesActiveClass?: string;
-    children: React.ReactNode;
-}
-
-const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, arr, dottesClass, dottesActiveClass, children }: DraggableSliderProps) => {
+const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, data, dottesClass, dottesActiveClass, children }: DraggableSliderProps) => {
     const [slideCount, setSlideCount] = useState(0);
     const [offsetTransition, setOffsetTransition] = useState(0);
     const [slideWidth, setSlideWidth] = useState(0);
@@ -35,11 +25,11 @@ const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, arr, dot
 
     const handleRightClick = () => {
         setSlideCount(() => {
-            if (slideCount >= arr.length - 1) return arr.length - 1;
+            if (slideCount >= data.length - 1) return data.length - 1;
             return slideCount + 1;
         });
         setOffsetTransition(() => {
-            if (offsetTransition === slideWidth * (arr.length - 1)) return slideWidth * (arr.length - 1);
+            if (offsetTransition === slideWidth * (data.length - 1)) return slideWidth * (data.length - 1);
             return offsetTransition + slideWidth;
         });
         sliderRef.current?.classList.add('scroll-smooth');
@@ -70,8 +60,7 @@ const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, arr, dot
                 </DraggableExtend>
                 <div className="flex justify-center gap-2">
                     {
-                        arr.map(((item, index) => {
-
+                        data.map(((item, index) => {
                             if (index === slideCount) {
                                 return <div key={index} className={`${dottesActiveClass} rounded-full w-8 h-2 md:h-3 my-6`}></div>
                             } else {
