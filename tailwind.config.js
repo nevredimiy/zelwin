@@ -25,6 +25,7 @@ export default {
       colors: {
         'regal-blue': '#3861FB',
         'light-blue': '#F2F5FB',
+        'accent-blue': '#D7DFFE',
         'regal-green': '#1BCB96',
         'regal-gray': '#919191',
         'active-gray': '#F2F5FB',

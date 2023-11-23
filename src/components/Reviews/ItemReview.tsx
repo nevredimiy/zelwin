@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import ikl from '../../assets/images/reviews/ikl.svg';
 import Modal from '../Modal';
 

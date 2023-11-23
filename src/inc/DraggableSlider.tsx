@@ -41,7 +41,14 @@ const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, data, do
       if (sliderRef.current) return (sliderRef.current?.children[0].clientWidth + 20);
       return 0;
     })
-  }, [offsetTransition])
+    }, [offsetTransition])
+
+    const dottesClick = (index:number) => {
+        setSlideCount(index);
+        setOffsetTransition(() => index * slideWidth);
+        sliderRef.current?.classList.add('scroll-smooth');
+        setTimeout(() => sliderRef.current?.classList.remove('scroll-smooth'), 300)
+    }
 
     return (
         <section className={`${sectionClass} px-8 py-20`}>
@@ -64,7 +71,7 @@ const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, data, do
                             if (index === slideCount) {
                                 return <div key={index} className={`${dottesActiveClass} rounded-full w-8 h-2 md:h-3 my-6`}></div>
                             } else {
-                                return <div key={index} className={`${dottesClass} rounded-full aspect-square w-2 border-2 md:w-3 my-6`}></div>
+                                return <div onClick={() => dottesClick(index)} key={index} className={`${dottesClass} cursor-pointer rounded-full aspect-square w-2 border-2 md:w-3 my-6`}></div>
                             }
                         }))
                     }
