@@ -7,6 +7,7 @@ import burgerIcon from '../../assets/images/icons/burger-icon.svg';
 import closeIcon from '../../assets/images/icons/close-icon.svg';
 import Menu from './Menu';
 import Search from './Search';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isOpenMobileMenu, setIsOpenMobileMinu] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
             <div className="container">
                <div className="flex justify-between items-center p-3 h-full relative z-20 before:absolute before:top-0 before:w-full before:left-0 before:h-full
             before:z-20 before:bg-regal-blue">
-                <a href="#" title='Logo'><img className='hover:opacity-75 transition relative z-20' src={logo} alt="Logo" /></a>
+                <Link to="/" title='Logo'><img className='hover:opacity-75 transition relative z-30' src={logo} alt="Logo" /></Link>
 
                 {/* burger menu */}
                 <button className='md:hidden relative z-20 w-6 flex justify-center items-center' onClick={handleOnOpen} type='button'>

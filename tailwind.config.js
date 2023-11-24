@@ -14,7 +14,7 @@ export default {
         'spacing': 'margin, padding',
       },
       backgroundImage: {
-        'ambassador-pattern': "url('./src/assets/images/woman/business-woman-phone-xl.jpg')"
+        'ambassador-pattern': "url('/assets/business-woman-phone-xl.jpg')"
       },
        container: {
         center: true,

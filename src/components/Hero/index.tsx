@@ -8,6 +8,7 @@ import company3 from '../../assets/images/hero/logo-company3-icon.svg';
 import user1 from '../../assets/images/avatars/user1-avatar.png';
 import user2 from '../../assets/images/avatars/user2-avatar.png';
 import user3 from '../../assets/images/avatars/user3-avatar.png';
+import { Link } from 'react-router-dom';
 
 const index = () => {
     return (
@@ -18,12 +19,12 @@ const index = () => {
                     <div className="md:text-2xl lg:px-36">We do not hide our prices because they are the best on the market.</div>
                 </div>
                 <div className="flex justify-center items-center mb-1 relative z-20">
-                    <button type='button' className='border border-transparent transition hover:border-regal-blue hover:bg-white hover:text-regal-blue group rounded-full pl-6 py-1 pr-1 bg-regal-blue flex items-center gap-4 text-white text-lg font-medium'>
+                    <Link to='/services' className='border border-transparent transition hover:border-regal-blue hover:bg-white hover:text-regal-blue group rounded-full pl-6 py-1 pr-1 bg-regal-blue flex items-center gap-4 text-white text-lg font-medium'>
                         See services
                         <div className="border border-regal-blue bg-white flex justify-center items-center w-10 h-10 rounded-full">
                             <ArrowRight className='fill-regal-blue' />
                         </div>
-                    </button>
+                    </Link>
                 </div>
                 <div className="grid relative px-3 ssm:grid-cols-2 lg:grid-cols-[280px_minmax(400px,_1fr)_280px]">
                     <div className="ssm:relative ssm:top-6 md:-top-16 lg:-top-28 group">

@@ -1,9 +1,11 @@
+
 const index = () => {
+
     return (
-        <section className='px-8 py-20 h-[672px] ssm:[900px]
-        bg-ambassador-pattern bg-[65%] bg-no-repeat
+        <section className="px-8 py-20 h-[672px] ssm:[900px]
+         bg-ambassador-pattern bg-[65%] bg-no-repeat
         bg-cover relative z-10 xl:bg-right-top
-        '>
+        ">
             <div className="container h-full">
                 <div className="flex items-end w-full h-full relative left-2 md:left-10 z-100 bottom-0">
                     <div className="bg-white w-full md:w-auto ssm:max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-3xl relative z-100 rounded-3xl py-10 px-14

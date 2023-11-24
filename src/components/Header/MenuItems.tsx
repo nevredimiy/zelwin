@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import chewronIconDown from '../../assets/images/icons/chevron-down.svg';
 import chewronIconRight from '../../assets/images/icons/chevron-right.svg';
-import Dropdown from './Dropdown';
-import {useResize} from '../../inc/useResize';
+import { useResize } from '../../inc/useResize';
+import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 interface MenuItemsProps {
     items: {
@@ -25,8 +26,23 @@ interface MenuItemsProps {
 const MenuItems = ({ items }: MenuItemsProps) => {
     const [isShowDropdown, setIsShowDropdown] = useState<boolean>(false);
     const sizeScreen = useResize();
+    const dropmenuRef = useRef<HTMLLIElement | null>(null);
+
+    useEffect(() => {
+        document.addEventListener("mousedown", (event: MouseEvent) => {
+            if (dropmenuRef.current && !dropmenuRef.current.contains(event.target as Node)) {
+                setIsShowDropdown(false);
+            }
+        });
+        return () => {
+            document.removeEventListener("mousedown", () => {
+               setIsShowDropdown(false);
+        });
+        }
+    });
+
     return (
-        <li className="p-2 group">
+        <li  ref={dropmenuRef} className="p-2 group">
             {items.submenu ? (
                 <>
                     <button
@@ -47,11 +63,11 @@ const MenuItems = ({ items }: MenuItemsProps) => {
                             <div className="w-4 h-4 bg-white rotate-45 absolute top-4 left-1/2 -translate-x-1/2"></div>
                         </div>
                     }
-                    <Dropdown submenu={items.submenu} isShow={isShowDropdown} sizeScreen={sizeScreen} setIsShowDropdown={setIsShowDropdown} />
+                    <Dropdown submenu={items.submenu} sizeScreen={sizeScreen} isShow={isShowDropdown}setIsShowDropdown={setIsShowDropdown} />
 
                 </>
             ) : (
-                <a className="group-hover:opacity-75" href={items.url}>{items.title}</a>
+                <Link className="group-hover:opacity-75" to={items.url}>{items.title}</Link>
             )}
 
         </li>

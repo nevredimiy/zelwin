@@ -21,8 +21,9 @@ interface DropdownProps {
 
 const Dropdown = ({ submenu, isShow, sizeScreen, setIsShowDropdown }: DropdownProps) => {
   const [isAciveSubmenu, setIsActiveSubmenu] = useState(0);
+
   return (
-    <div className={`
+    <div  className={`
     ${isShow ? 'block lg:flex' : 'hidden'} absolute top-0 left-0 right-0 bg-white
     md:top-14 md:left-3 md:right-3 md:rounded-3xl overflow-hidden
     `}>
@@ -42,16 +43,16 @@ const Dropdown = ({ submenu, isShow, sizeScreen, setIsShowDropdown }: DropdownPr
             </li>
           }
           {submenu.map((submenuItems, index) => (
-              <li
-                onClick={() => setIsActiveSubmenu(index)}
-                key={submenuItems.id}
-                className={`menu-items cursor-pointer p-2
+            <li
+              onClick={() => setIsActiveSubmenu(index)}
+              key={submenuItems.id}
+              className={`menu-items cursor-pointer p-2
           ${isAciveSubmenu === index ? 'text-regal-blue' : 'text-regal-gray'}
            flex-shrink-0
           `}
-              >
-                <div className="">{submenuItems.title}</div>
-              </li>
+            >
+              <div className="">{submenuItems.title}</div>
+            </li>
           ))}
         </ul>
       </DraggableX>

@@ -263,7 +263,7 @@ export const menuItemsData = [
     },
     {
         title: 'About us',
-        url: '/about',
+        url: '/about-us',
     },
     {
         title: 'Cases',
