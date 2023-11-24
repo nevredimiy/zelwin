@@ -3,7 +3,7 @@ import DraggableSlider from '../../inc/DraggableSlider';
 import {dataBestOffer} from './dataBestOffer'
 
 const BestOffer = () => {
-  const sectionClass = 'bg-regal-blue';
+  const sectionClass = 'bg-regal-blue relative z-20';
   const arrowClass = 'text-white transition hover:stroke-regal-blue';
   const dottesClass = 'border-white';
   const dottesActiveClass = 'bg-white';

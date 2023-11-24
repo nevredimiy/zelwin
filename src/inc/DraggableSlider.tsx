@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import ArrowRightSlider from '../assets/images/icons/arrow-right-for-slider.svg?react';
 import { DraggableExtend } from './DraggableExtend';
@@ -67,7 +67,7 @@ const DraggableSlider = ({ sectionClass, title, titleClass, arrowClass, data, do
                 </DraggableExtend>
                 <div className="flex justify-center gap-2">
                     {
-                        data.map(((item, index) => {
+                        data.map(((_item, index) => {
                             if (index === slideCount) {
                                 return <div key={index} className={`${dottesActiveClass} rounded-full w-8 h-2 md:h-3 my-6`}></div>
                             } else {

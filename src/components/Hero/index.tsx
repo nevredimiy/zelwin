@@ -26,11 +26,11 @@ const index = () => {
                     </button>
                 </div>
                 <div className="grid relative px-3 ssm:grid-cols-2 lg:grid-cols-[280px_minmax(400px,_1fr)_280px]">
-                    <div className="ssm:relative ssm:top-6 md:-top-16 lg:-top-28">
-                        <div className="relative left-6 ssm:left-12 mb-2 ssm:mb-6">
-                            <ArrowLeftSnake className=' ssm:w-36 ssm:h-14 md:h-16 lg:w-48 lg:h-24 stroke-2 ssm:stroke-1' />
+                    <div className="ssm:relative ssm:top-6 md:-top-16 lg:-top-28 group">
+                        <div className="relative left-6 ssm:left-12 mb-2 ssm:mb-6 group-hover:-translate-x-2 transition-transform duration-500">
+                            <ArrowLeftSnake className='ssm:w-36 ssm:h-14 md:h-16 lg:w-48 lg:h-24 stroke-2 ssm:stroke-1' />
                         </div>
-                        <div className="bg-white rounded-xl p-4 inline-block shadow-md ssm:min-w-[240px]">
+                        <div className="bg-white rounded-xl p-4 inline-block shadow-md ssm:min-w-[240px] group-hover:-translate-y-2 transition-transform duration-500">
                             <h2 className='font-semibold text-sm ssm:text-base mb-2'>Project in your portfolio</h2>
                             <div className="flex gap-2 justify-between items-center text-xs mb-1">
                                 <img className='shadow-customShadow w-6 h-6 ssm:w-8 ssm:h-8 p-1 rounded-full md:w-8 md:h-8' src={company1} alt="Company name" />
@@ -47,11 +47,11 @@ const index = () => {
                             <div className="text-regal-blue font-semibold text-sm ssm:text-base mt-1">+ 1000</div>
                         </div>
                     </div>
-                    <div className="absolute top-28 right-3 ssm:-top-12 md:-top-16 lg:-top-24">
-                        <div className="relative left-20 ssm:left-24 md:left-14 lg:-left-10 mb-2 lg:mb-16 ssm:mb-6">
+                    <div className="absolute top-28 z-10 right-3 ssm:-top-12 md:-top-16 lg:-top-24 group">
+                        <div className="relative left-20 ssm:left-24 md:left-14 lg:-left-10 mb-2 lg:mb-16 ssm:mb-6 group-hover:-translate-x-2 transition-transform duration-500">
                            <ArrowRightSnake className='ssm:w-[90px] ssm:h-[45px] lg:w-36 lg:h-16' />
                         </div>
-                        <div className="bg-white rounded-xl p-4 inline-block ssm:block shadow-md  ssm:min-w-[240px]">
+                        <div className="bg-white rounded-xl p-4 inline-block ssm:block shadow-md ssm:min-w-[240px] group-hover:-translate-y-2 transition-transform duration-500">
                             <h2 className='font-semibold text-sm ssm:text-base mb-2'>Influencers with us</h2>
                             <div className="flex gap-2 justify-between items-center text-xs mb-1">
                                 <img className='shadow-md w-6 h-6 ssm:w-8 ssm:h-8 rounded-full' src={user1} alt="BitBoy Crypto" />
@@ -73,11 +73,11 @@ const index = () => {
                     </div>
                     <div className="mt-14 px-8 ssm:px-0 ssm:col-span-2 lg:col-span-1 ssm:flex
                     ssm:justify-end md:block md:relative md:-top-72 md:left-1/3 lg:left-0
-                    lg:w-full lg:-top-20 lg:flex lg:flex-col lg:items-center">
-                        <div className="relative left-8 -top-2 ssm:static mr-6 md:relative md:left-16 md:mb-4 lg:-left-40">
+                    lg:w-full lg:-top-20 lg:flex lg:flex-col lg:items-center group">
+                        <div className="relative left-8 -top-2 ssm:static mr-6 md:relative md:left-16 md:mb-4 lg:-left-40 group-hover:-translate-x-2 transition-transform duration-500">
                            <ArrowDownSnake className='w-8 h-24 ssm:w-9 ssm:h-28 md:w-14 md:h-40' />
                         </div>
-                        <div className="bg-white rounded-xl p-4 shadow-xl ssm:w-2/3 md:w-[344px] md:max-w-sm lg:max-w-xl lg:w-full">
+                        <div className="bg-white rounded-xl p-4 shadow-xl ssm:w-2/3 md:w-[344px] md:max-w-sm lg:max-w-xl lg:w-full group-hover:-translate-y-2 transition-transform duration-500">
                             <h2 className='font-semibold text-sm ssm:text-base mb-2'>Attracted by our clients</h2>
                             <div className="flex items-end gap-2">
                                 <div className="flex flex-col w-1/4">

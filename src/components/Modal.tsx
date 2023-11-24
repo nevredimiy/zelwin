@@ -13,8 +13,10 @@ const Modal = ({ setIsActive, children, modalContentClass }: ModalProps) => {
     document.body.classList.add('overflow-y-hidden');
   }, []);
 
-  const handleClick:React.MouseEventHandler<HTMLDivElement> = (e) => {
-    if (e.target.id !== 'modal') return;
+  const handleClick: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    if (e.target instanceof HTMLElement) {
+      if (e.target.id !== 'modal') return;
+    }
     setIsActive(false);
     document.body.classList.remove('overflow-y-hidden');
 

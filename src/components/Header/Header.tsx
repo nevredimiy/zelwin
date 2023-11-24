@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-import SearchIcon from '../../assets/images/icons/search-icon.svg?react';
 import CartIcon from '../../assets/images/icons/cart-icon.svg?react';
 
 import logo from '../../assets/images/logo.svg';
 import burgerIcon from '../../assets/images/icons/burger-icon.svg';
 import closeIcon from '../../assets/images/icons/close-icon.svg';
 import Menu from './Menu';
+import Search from './Search';
 
 const Header = () => {
     const [isOpenMobileMenu, setIsOpenMobileMinu] = useState(false);
@@ -44,18 +44,8 @@ const Header = () => {
                     <Menu />
                 </nav>
 
-                <div className="flex items-center gap-4">
-                    <button className='xl:hidden' title='Search' type='button'><SearchIcon className='fill-white hover:opacity-75 relative z-20' /></button>
-
-                    <form className='hidden xl:block relative z-20'>
-                        <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                        <div className="relative">
-                            <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
-                                <SearchIcon className='fill-white hover:opacity-75 relative z-20 w-4 h-4' />
-                            </div>
-                            <input type="search" id="search" className="block w-full p-2 ps-10 text-sm text-white border border-white rounded-lg bg-regal-blue focus:ring-blue-500 focus:border-blue-500 placeholder:text-light-blue" placeholder="Search a service" required />
-                        </div>
-                    </form>
+                <div className="flex items-center gap-4 relative">
+                   <Search />
 
                     <div className='group relative z-20'>
                         <button title='Cart' type="button" className='border border-transparent rounded-full px-5 py-2 bg-white hover:border-white transition hover:bg-regal-blue'>

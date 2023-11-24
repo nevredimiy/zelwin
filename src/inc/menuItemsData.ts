@@ -188,7 +188,7 @@ const subSubmenu3 = [
 ];
 
 
-const submenu = [
+export const submenu = [
     {
         id: '1s',
         title: 'Social media',

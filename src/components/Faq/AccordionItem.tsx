@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import chevron from '../../assets/images/faq/chevron.svg';
-import Collapse from 'react-collapse';
+import {Collapse} from 'react-collapse';
 
 interface AccordionItemProps {
     data: {
