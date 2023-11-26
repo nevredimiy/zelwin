@@ -37,7 +37,7 @@ const Search = () => {
                                     bg-white xl:bg-regal-blue focus:ring-blue-500 focus:border-blue-500 xl:placeholder:text-light-blue placeholder:text-regal-gray
                                      outline-none
                                     "
-                        placeholder="Search a service"
+                        placeholder="Search a services"
                         required
                     />
                 </div>

@@ -1,13 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import CartIcon from '../../assets/images/icons/cart-icon.svg?react';
-
 import logo from '../../assets/images/logo.svg';
 import burgerIcon from '../../assets/images/icons/burger-icon.svg';
 import closeIcon from '../../assets/images/icons/close-icon.svg';
 import Menu from './Menu';
 import Search from './Search';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isOpenMobileMenu, setIsOpenMobileMinu] = useState(false);
@@ -45,8 +44,9 @@ const Header = () => {
                     <Menu />
                 </nav>
 
-                <div className="flex items-center gap-4 relative">
-                   <Search />
+                    <div className="flex items-center gap-4 relative">
+
+                        <Search />
 
                     <div className='group relative z-20'>
                         <button title='Cart' type="button" className='border border-transparent rounded-full px-5 py-2 bg-white hover:border-white transition hover:bg-regal-blue'>

@@ -6,7 +6,7 @@ declare module 'menuItemsData.ts' {
     description?: string;
     url: string;
   }[];
-  const submenu: {
+  export const submenu: {
     id: string;
     title: string;
     url: string;

@@ -37,7 +37,7 @@ const ServiceItem = ({ dataItem }: serviceItemProps) => {
         <div className={`${dataItem.label && 'pt-12'} mx-4`}>
           <div className="font-semibold mb-6">{dataItem.title}</div>
           {dataItem.desc && <div className="mb-8">{dataItem.desc}</div>}
-          <a className='text-regal-blue font-bold transition hover:text-regal-sky' href="">View more</a>
+          <a className='text-regal-blue font-bold transition hover:text-regal-green' href="">View more</a>
         </div>
       </div>
       <div className="border-t border-regale-gray">

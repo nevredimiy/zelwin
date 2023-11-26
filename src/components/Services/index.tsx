@@ -2,9 +2,7 @@ import { useState } from 'react';
 import { DraggableX } from '../../inc/DraggableX';
 import { menuItemsData } from '../../inc/menuItemsData';
 import { Icons } from './Icons';
-import ButtonRounded from '../ButtonRounded';
-import { dataServices } from './dataServices';
-import ServiceItem from './ServiceItem';
+import ServiceList from './ServiceList';
 
 const Services = () => {
   const [service, setService] = useState(0);
@@ -40,16 +38,8 @@ const Services = () => {
             }
           </div>
         </DraggableX>
-        <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-3 ">
-          {dataServices.map((item, index) => {
-            return <ServiceItem key={index} dataItem={item} />
-          })}
-        </div>
-        <div className="flex justify-center">
-          <ButtonRounded rootClass='border border-transition bg-regal-blue py-4 flex justify-center w-[200px] mt-4 ssm:mt-6 xl:mt-10 transition group hover:border-regal-blue hover:bg-white'>
-            <div className="font-medium text-xl text-white transition group-hover:text-regal-blue">See all</div>
-          </ButtonRounded>
-        </div>
+        <ServiceList />
+
       </div>
 
     </section>

@@ -24,7 +24,6 @@ export interface DraggableSliderProps {
     children: React.ReactNode;
 }
 
-
 export type SliderProps = {
   data: {
     title: string,
@@ -34,3 +33,27 @@ export type SliderProps = {
     newPrice: number,
   };
 }
+
+type subSubmenu = {
+  id: number;
+  title: string;
+  description?: string;
+  url: string;
+}[];
+
+export type submenu = {
+  id: string;
+  title: string;
+  url: string;
+  subSubmenu: subSubmenu;
+  servicesCount: number;
+  serviceIcon: string;
+}[];
+
+export type menuItemsData = {
+  title: string;
+  url: string;
+  submenu?: submenu;
+}[];
+
+
